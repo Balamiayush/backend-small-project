@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="w-full h-screen text-white bg-slate-900 p-10">
+      <a
+        href="/"
+        class="inline-block px-5 py-2 mx-auto text-white bg-blue-600 rounded-full hover:bg-blue-700 md:mx-0"
+      >
+        Back to home.
+      </a>
+      <h1 class="text-4xl tracking-tighter mb-3 font-semibold">ALL USERS</h1>
+      <div class="users flex w-full flex-wrap gap-5">
+        <% users.forEach((user) => { %>
+          <div class="user rounded-lg max-w-72 p-4 bg-zinc-800">
+            <div class="w-full h-52 rounded-lg bg-red-600">
+              <img
+                src="<%=user.image%>""
+                alt=""
+                class="w-full h-full rounded-lg object-cover"
+              />
+            </div>
+            <h3 class="tracking-tighter text-xl mt-3"><%= user.name %></h3>
+            <h5 class="tracking-tighter text-xl mt-3"><%= user.email %></h5>
+            <div class="flex gap-3 mt-3">
+              <a
+                href="#_"
+                class="inline-block px-5 py-2 mx-auto text-white bg-blue-600 rounded-lg hover:bg-blue-700 md:mx-0"
+              >
+                Edit
+              </a>
+              <a
+                href="/delete/<%= user._id %>"
+                class="inline-block px-5 py-2 mx-auto text-white bg-red-600 rounded-lg hover:bg-red-700 md:mx-0"
+              >
+                Delete
+              </a>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "mongooes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "code "
+  },
+  "keywords": [
+    "coding",
+    "aayush"
+  ],
+  "author": "Ayush",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0"
+  }
+}
