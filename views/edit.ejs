@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="w-full h-screen text-white bg-slate-900 p-10">
+      <nav>
+        <a
+          href="/read"
+          class="inline-block px-5 py-2 mx-auto text-white rounded-full hover:bg-blue-700 md:mx-0"
+        >
+          read
+        </a>
+      </nav>
+      <h1 class="text-4xl tracking-tighter mb-3 font-semibold">Update User</h1>
+      <form class="flex gap-5" action="/create " method="post">
+        <input
+        name="name"
+          type="text"
+          placeholder="Name."
+          value="<%= user.name %>"
+          class="w-72 py-2 px-2 bg-zinc-500 rounded-md text-xl font-medium"
+        />
+        <input
+        name="email"
+          type="text"
+          placeholder="Email."
+          value="<%= user.email %>"
+          class="w-72 py-2 px-2 bg-zinc-500 rounded-md text-xl font-medium"
+        />
+        <input
+        name="image"
+          type="text"
+          placeholder="Image URL."
+          value="<%= user.image %>"
+          class="w-72 py-2 px-2 bg-zinc-500 rounded-md text-xl font-medium"
+        />
+        <button
+          type="submit"
+          class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          data-rounded="rounded-md"
+          data-primary="blue-600"
+          data-primary-reset="{}"
+        >
+           Update 
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
